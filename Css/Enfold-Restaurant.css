@@ -861,7 +861,13 @@ label {
 
 .list-item-figure {
     display: flex;
+    justify-content: space-between;
     column-gap: 15px;
+}
+
+.list-item-figcaption {
+    width: 100%;
+    display: flex;
 }
 
 .list-item-img {

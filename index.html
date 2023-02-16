@@ -17,7 +17,7 @@
     <!-- site loader -->
     <div class="site-loader">
         <div class="loader-content">
-            <img src="Images/logo-restaurant.png" alt="logo restaurant" class="loader-img"/>
+            <img src="Images/logo-restaurant.png" alt="logo restaurant" class="loader-img">
             <div class="loader"></div>
         </div>
     </div>
@@ -28,9 +28,9 @@
             <!-- website logo -->
             <a href="index.html" target="_blank">
                 <picture>
-                    <img src="Images/logo-restaurant_white.png" alt="logo restaurant" title="logo restaurant" class="website-logo">
-    
                     <source media="(max-width:768px)" srcset="Images/logo-restaurant.png" class="website-logo">
+
+                    <img src="Images/logo-restaurant_white.png" alt="logo restaurant" title="logo restaurant" class="website-logo">
                 </picture>
             </a>
     
@@ -218,28 +218,30 @@
                                     <figure class="list-item-figure">
                                         <img src="Images/pizza-180x180.jpg" alt="pizza" title="pizza" class="list-item-img show-element_scale">
     
-                                        <figcaption>
-                                            <h4 class="title">sesame crusted scotch fillet</h4>
-                                            <p>with honeyed pedro ximenez sauce and potato cake</p>
-                                        </figcaption>
-    
-                                        <div class="price">7.50$</div>
+                                        <figcaption class="list-item-figcaption">
+                                            <div>
+                                                <h4 class="title">sesame crusted scotch fillet</h4>
+                                                <p>with honeyed pedro ximenez sauce and potato cake</p>
+                                            </div>
+                                            <div class="price">7.50$</div>
+                                        </figcaption>    
                                     </figure>
                                 </a>
                             </li>
-        
+                            
                             <!-- item 02 -->
                             <li class="list-item">
                                 <a href="Images/burger-1500x1000.jpg">
                                     <figure class="list-item-figure">
                                         <img src="Images/burger-180x180.jpg" alt="burger" title="burger" class="list-item-img show-element_scale">
-    
-                                        <figcaption>
-                                            <h4 class="title">poast rack of lamb</h4>
-                                            <p>with herb crust and fruity mesclun salad and straw potato</p>
+                                            
+                                        <figcaption class="list-item-figcaption">
+                                            <div>
+                                                <h4 class="title">poast rack of lamb</h4>
+                                                <p>with herb crust and fruity mesclun salad and straw potato</p>
+                                            </div>
+                                            <div class="price">7.50$</div>
                                         </figcaption>
-    
-                                        <div class="price">7.50$</div>
                                     </figure>
                                 </a>
                             </li>
@@ -562,18 +564,18 @@
                     <div class="parent-map">
                         <div class="map">
                             <!-- map images -->
-                            <img src="Images/vt.png" class="map-img">
-                            <img src="Images/vt (2).png" class="map-img">
-                            <img src="Images/vt (4).png" class="map-img">
-                            <img src="Images/vt (1).png" class="map-img">
-                            <img src="Images/vt (3).png" class="map-img">
-                            <img src="Images/vt (5).png" class="map-img">
+                            <img src="Images/vt.png" alt="" class="map-img">
+                            <img src="Images/vt(2).png" alt="" class="map-img">
+                            <img src="Images/vt(4).png" alt="" class="map-img">
+                            <img src="Images/vt(1).png" alt="" class="map-img">
+                            <img src="Images/vt(3).png" alt="" class="map-img">
+                            <img src="Images/vt(5).png" alt="" class="map-img">
 
                             <!-- spotlights -->
-                            <img src="Images/spotlight.png" class="spotlight spotlight-01 show-element_position">
-                            <img src="Images/spotlight.png" class="spotlight spotlight-02 show-element_position">
-                            <img src="Images/spotlight.png" class="spotlight spotlight-03 show-element_position">
-                            <img src="Images/spotlight.png" class="spotlight spotlight-04 show-element_position">
+                            <img src="Images/spotlight.png" alt="" class="spotlight spotlight-01 show-element_position">
+                            <img src="Images/spotlight.png" alt="" class="spotlight spotlight-02 show-element_position">
+                            <img src="Images/spotlight.png" alt="" class="spotlight spotlight-03 show-element_position">
+                            <img src="Images/spotlight.png" alt="" class="spotlight spotlight-04 show-element_position">
                         </div>
                     </div>
                 </fieldset>
@@ -595,7 +597,7 @@
     
                         <div class="form-group textarea">
                             <label for="massage">massage</label>&nbsp;*
-                            <textarea name="" id="massage" cols="60" rows="10" class="form-item" required></textarea>
+                            <textarea id="massage" cols="60" rows="10" class="form-item" required></textarea>
                         </div>
     
                         <input type="submit" value="send" class="btn input_submit">
@@ -627,13 +629,13 @@
                     <!-- reservations form -->
                     <form action="" method="post" class="contact-form">
                         <div class="form-group input_text">
-                            <label for="name">name <span class="highlight">*</span></label>
-                            <input type="text" id="name" class="form-item" required autocomplete="off">
+                            <label for="name-2">name <span class="highlight">*</span></label>
+                            <input type="text" id="name-2" class="form-item" required autocomplete="off">
                         </div>
     
                         <div class="form-group input_email">
-                            <label for="email">e-male <span class="highlight">*</span></label>
-                            <input type="email" id="email" class="form-item" required autocomplete="off">
+                            <label for="email-2">e-male <span class="highlight">*</span></label>
+                            <input type="email" id="email-2" class="form-item" required autocomplete="off">
                         </div>
     
                         <div class="form-group">
@@ -711,14 +713,14 @@
                             <p>Prefer to make your reservation via phone? <span class="highlight"> Give us a call!</span> You can contact us between 10am and 22pm ever day of the week. Our Phone number is <span class="highlight">(555) 784 332</span></p>
                         </div>
     
-                        <dt class="highlight">Opening hours:</dt>
-                        <dd>Mon – Fri, 10am – 12pm</dd>
-                        <dd>Sat – Sun, 11am – 04am</dd>
+                        <p class="highlight">Opening hours:</p>
+                        <p>Mon – Fri, 10am – 12pm</p>
+                        <p>Sat – Sun, 11am – 04am</p>
                     </article>    
                 </div>
 
                 <div class="parent-plan">
-                    <div class="hotspot tooltip show-element_position" data-tooltip="For up to 8 persons" data-tooltip="For up to 8 persons">
+                    <div class="hotspot tooltip show-element_position" data-tooltip="For up to 8 persons">
                         <div class="hotspot-text">1</div>
                         <div class="hotspot-loop"></div>
                     </div>
