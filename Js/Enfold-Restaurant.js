@@ -30,7 +30,8 @@ const modalBtnNext = document.querySelector('.modal-btn_next');
 const imgName = document.getElementById('img-name');
 const imgNum = document.getElementById('img-num');
 // form
-const formItems = document.querySelectorAll('.form-item:not(.input_submit)');
+const forms = document.querySelectorAll('form');
+const inputDateEl = document.querySelector('input[type="date"]');
 // scroll up page show
 const scrollUpEl = document.querySelector('.scroll-up-page');
 
@@ -38,7 +39,6 @@ const scrollUpEl = document.querySelector('.scroll-up-page');
 document.onreadystatechange = function() {
     if (document.readyState !== "complete") {
         bodyEl.style.visibility = "hidden";
-        siteLoaderEl.style.display = "block";
         siteLoaderEl.style.visibility = "visible";
     } else {
         siteLoaderEl.style.opacity = "0";
@@ -220,30 +220,34 @@ galleryImgs.forEach((galleryImg,index)=>{
     });
 });
 // hide modal
-const hideModal = (target)=>{
-    target.addEventListener('click',()=>{
-        modalBtnClose.classList.add('active-btn_close');
-        setTimeout(()=>{
-            modalEl.classList.remove('show-modal');
-        },500);
-        setTimeout(()=>{
-            modalBtnClose.classList.remove('active-btn_close');
-        },1000);
-    });
-};
-hideModal(modalBtnClose);
-hideModal(modalEl);
+modalEl.addEventListener('click',()=>{
+    modalBtnClose.classList.add('active-btn_close');
+    setTimeout(()=>{
+        modalEl.classList.remove('show-modal');
+    },500);
+    setTimeout(()=>{
+        modalBtnClose.classList.remove('active-btn_close');
+    },1000);
+});
 // debug
 modalImgEl.addEventListener('click',(e)=>{
     e.stopPropagation();
 });
 
 // form
-formItems.forEach((formItem)=>{
-    formItem.addEventListener('keyup',()=>{
-        formItem.classList.add('input-target');
+forms.forEach((formEl)=>{
+    formEl.addEventListener('submit',(e)=>{
+        e.preventDefault();
     });
 });
+
+// date value dynamic
+let day = new Date().getDate();
+let month = new Date().getMonth() + 1;
+const year = new Date().getFullYear();
+day < 10 ? day = '0' + day : false;
+month < 10 ? month = '0' + month : false;
+inputDateEl.value = `${year}-${month}-${day}`;
 
 // scroll up page show
 scrollUpEl.style.display = 'none';
